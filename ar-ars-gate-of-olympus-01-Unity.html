@@ -582,13 +582,13 @@ function fit(e,m){e.style.fontSize="";if(e.offsetWidth>m)e.style.fontSize=parseF
 if(land){s=Math.min(W/1000,Ha/460);oy=(Ha-460*s)/2;X=function(x){return W/2+(x-500)*s};Y=function(y){return oy+(y-5)*s};
 lw=360*s;lx=X(745);ly=Y(20);fw=470*s;fh=172*s;zc=X(270);fy=Y(272);zt=Y(6);zm=377*s;bc=X(745);yb=Y(158);ys=152*s;bw=400*s;bh=72*s;by=Y(328);bf=34*s;tw=440*s}
 else{s=Math.min(W/571,Ha/980);v=Math.min(Ha/980,1.3*s);oy=(Ha-980*v)/2;Y=function(y){return oy+y*v};
-lw=403*s;lx=W/2;ly=Y(40);fw=523*s;fh=192*s;zc=W/2;fy=Y(522);zt=ly+lw*la-6*s;zm=472*s;bc=W/2;yb=Y(706);ys=Y(834)-yb;bw=432*s;bh=78*s;by=Y(888);bf=38*s;tw=W}
+lw=403*s;lx=W/2;ly=Y(40);fw=.82*W;fh=.108*H;zc=W/2;fy=.478*H;zt=ly+lw*la-6*s;zm=472*s;bc=W/2;yb=Y(706);ys=Y(834)-yb;bw=432*s;bh=78*s;by=Y(888);bf=38*s;tw=W}
 fx=zc-fw/2;cs=.8*fh;fb=.112*cs;
 zh=Math.min((fy+.6*fb-zt)/0.937,zm,((land?bc-190*s:W-4)-zc)/((0.946-0.396)*ar));
 EL={zx:zc-0.396*ar*zh,zy:fy+.6*fb-0.937*zh,zh:zh,zw:ar*zh,zo:EL?EL.zo:0,cy:fy+.6*fb,fx:fx,fy:fy,fw:fw,fh:fh,fb:fb,cs:cs,gx:zc,gy:fy+.3*fb,gr:.62*fw,land:land,dx:bc,dy:yb+ys/2,dr:330*s,t0:EL?EL.t0:G};
 bx(B,lx-lw/2,ly,lw,lw*la);var qx=lx-lw*.186,qy=ly+lw*la*.9,qw=Math.min(lw*(land?0.42:0.44),(qx-6)/1.06),qh=qw*0.6533;bx(t("endBf"),qx-.999*qw,qy-.062*qh,qw,qh);
-c=t("plq");bx(c,fx+fb,fy+fb,fw-2*fb,fh-2*fb);c.style.fontSize=(land?28:30)*s+"px";for(i=0;i<c.children.length;i++)fit(c.children[i],.9*(fw-2.4*fb));
-c=t("bon");var bTop=land?Math.max(yb,ly+lw*la+4*s):fy+fh+6*s,bH=Math.max(48,by-8*s-bTop);bx(c,bc-tw/2,bTop,tw,bH);"undefined"!=typeof BFX&&BFX&&BFX.fit(tw,bH);
+c=t("plq");bx(c,fx+fb,fy+fb,fw-2*fb,fh-2*fb);c.style.fontSize=(land?28*s:Math.min(30*s,.22*fh))+"px";for(i=0;i<c.children.length;i++)fit(c.children[i],.9*(fw-2.4*fb));
+c=t("bon");var bTop=land?Math.max(yb,ly+lw*la+4*s):.595*H,bH=land?Math.max(48,by-8*s-bTop):.260*H,bW=land?tw:.82*W;bx(c,bc-bW/2,bTop,bW,bH);"undefined"!=typeof BFX&&BFX&&BFX.fit(bW,bH);
 c=t("endBtn");bx(c,bc-bw/2,by,bw,bh);c.style.fontSize=bf+"px";fit(t("endBt"),.84*bw);
 hw=.2*bw;tx=bc+.31*bw;ty=by+.62*bh;c=t("endH");bx(c,tx-HAND_TIP[0]*hw,ty-HAND_TIP[1]*hw*0.91515,hw,hw*0.91515);c.style.transformOrigin=100*HAND_TIP[0]+"% "+100*HAND_TIP[1]+"%";
 rr=.6*bh;bx(t("endHr"),tx-rr/2,ty-rr/2,rr,rr)}
